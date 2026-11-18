@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Motor Melee</title>
+  <meta name="description" content="Privacy Policy for Motor Melee, an iOS app that lets you compare cars through animated, head-to-head battles.">
+  <style>
+    :root {
+      --bg: #171717;
+      --ink: #ffffff;
+      --body: #d4d4d4;
+      --muted: #999999;
+      --line: #353535;
+      --surface: rgba(255, 255, 255, 0.045);
+      --accent: #facc15;
+      --accent-deep: #eab308;
+      --accent-soft: rgba(250, 204, 21, 0.16);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      --radius: 20px;
+      --max: 42rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+      color-scheme: dark;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(250, 204, 21, 0.14), transparent 55%),
+        radial-gradient(ellipse 70% 45% at 100% 0%, rgba(250, 204, 21, 0.07), transparent 50%),
+        linear-gradient(165deg, #1c1c1c 0%, var(--bg) 48%, #141414 100%);
+      background-attachment: fixed;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black, transparent);
+    }
+
+    .page {
+      position: relative;
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+      padding: 3.5rem 0 5rem;
+      animation: rise 0.7s ease-out both;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      margin-bottom: 2.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-size: clamp(2.25rem, 6vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      animation: rise 0.8s 0.05s ease-out both;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(1.55rem, 4vw, 1.9rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+      animation: rise 0.8s 0.12s ease-out both;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      animation: rise 0.8s 0.18s ease-out both;
+    }
+
+    .updated::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: var(--body);
+      margin-bottom: 2.5rem;
+      animation: rise 0.8s 0.22s ease-out both;
+    }
+
+    main {
+      display: grid;
+      gap: 1.35rem;
+      animation: rise 0.85s 0.28s ease-out both;
+    }
+
+    section {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 1.45rem 1.5rem 1.55rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.7rem;
+    }
+
+    p {
+      color: var(--body);
+      font-size: 0.98rem;
+      margin-bottom: 0.85rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(250, 204, 21, 0.35);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+      border-bottom-color: var(--accent-deep);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 2.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-align: center;
+      animation: rise 0.8s 0.35s ease-out both;
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 1.25rem, var(--max));
+        padding: 2.25rem 0 3.5rem;
+      }
+
+      section {
+        padding: 1.2rem 1.15rem 1.3rem;
+        border-radius: 16px;
+      }
+
+      section:hover {
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="brand">Motor <span>Melee</span></p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: November 17, 2026</p>
+    </header>
+
+    <p class="intro">
+      Motor Melee is an iOS app that lets you compare cars through animated, head-to-head battles. We believe your experience should be simple, fun, and private.
+    </p>
+
+    <main>
+      <section>
+        <h2>Data Collection and Storage</h2>
+        <p>
+          Motor Melee does not collect personal information. The app does not require an account or access to personal data on your device.
+        </p>
+        <p>
+          Vehicle information used for comparisons is included with the app. Your car selections and battle results are processed locally on your device and are not transmitted to external servers.
+        </p>
+        <p>
+          Any app preferences saved to support functionality remain on your device.
+        </p>
+      </section>
+
+      <section>
+        <h2>Analytics and Tracking</h2>
+        <p>
+          Motor Melee does not contain advertisements, third-party analytics, or tracking software.
+        </p>
+        <p>
+          We do not track your activity or sell or share your personal information with third parties.
+        </p>
+      </section>
+
+      <section>
+        <h2>External Links</h2>
+        <p>
+          Motor Melee includes an optional link to an external website for vehicle data attribution. Opening this link takes you outside the app, where the website's own privacy practices apply.
+        </p>
+      </section>
+
+      <section>
+        <h2>Your Privacy Choices</h2>
+        <p>
+          Motor Melee does not require an account or personal information to use the app.
+        </p>
+        <p>
+          You can remove locally stored app data by deleting Motor Melee from your device. Some data may remain in existing device backups.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy as the app evolves. Any updates will be reflected on this page.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy, contact us at:
+        </p>
+        <p>
+          <a href="mailto:safmobilehelp@gmail.com">safmobilehelp@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Motor Melee
+    </footer>
+  </div>
+</body>
+</html>
